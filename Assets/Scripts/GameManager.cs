@@ -6,10 +6,8 @@ using UnityEngine.SceneManagement;
 
 public sealed class GameManager : MonoBehaviour {
     public UIManager UIManager;
-    public delegate void BlockFallen();
-    public delegate void BallShot();
-    public static BlockFallen BlockFallenEvent;
-    public static BallShot BallShotEvent;
+    public static System.Action BlockFallenEvent;
+    public static System.Action BallShotEvent;
     private int amountOfFallenBlocks = 0;
     private int amountOfBallsShot = 0;
     private void Start() {

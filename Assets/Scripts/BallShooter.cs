@@ -39,7 +39,7 @@ public class BallShooter : MonoBehaviour {
         Debug.Log(logId + ":: throwSpeed="+throwSpeed+" throwDirection="+throwDirection+" chargeTime="+chargeTime);
 
         BallController ball = Instantiate(ballPrefab, Camera.main.transform.position, Quaternion.FromToRotation(Vector3.forward, throwDirection));
-        ball.SetVelocity(throwDirection.normalized * throwSpeed);
+        ball.Velocity = throwDirection.normalized * throwSpeed;
         GameManager.BallShotEvent.Invoke();
     }
     private void SetTarget() {

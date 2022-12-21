@@ -18,5 +18,8 @@ public class BallController : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    public void SetVelocity(Vector3 velocity) => ballRb.velocity = velocity;
+    public Vector3 Velocity {
+        set => ballRb.velocity=value;
+        get => ballRb.velocity;
+    }
 }
